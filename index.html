@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kieran & Nang</title>
+    <title>Nang & Kieran</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,8 +29,9 @@
         background-color: #5e8a93;
         display: flex;
         justify-content: center;
-        gap: 8px;
-        padding: 14px 16px;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 10px 12px;
         position: sticky;
         top: 0;
         z-index: 100;
@@ -41,12 +42,13 @@
         background: none;
         border: none;
         font-family: "Great Vibes", cursive;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         color: #f0ebe5;
         cursor: pointer;
-        padding: 4px 20px;
+        padding: 4px 14px;
         border-radius: 999px;
         transition: background 0.2s, color 0.2s;
+        white-space: nowrap;
       }
 
       nav button:hover {
@@ -83,29 +85,37 @@
       }
 
       /* Home */
+      .home-floral {
+        width: 100%;
+        max-width: 560px;
+        display: block;
+        margin-bottom: -8px;
+      }
+
       .home-content {
         text-align: center;
         max-width: 560px;
-        margin-top: 40px;
       }
 
       .home-content h1 {
         font-family: "Great Vibes", cursive;
-        font-size: 5rem;
+        font-size: clamp(2.8rem, 8vw, 5rem);
         line-height: 1.1;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
       }
 
       .home-content p {
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
         line-height: 1.8;
-        opacity: 0.85;
+        opacity: 0.9;
       }
 
-      .home-floral {
+      .home-footer-floral {
         width: 100%;
-        max-width: 500px;
-        margin-bottom: -10px;
+        max-width: 320px;
+        display: block;
+        margin-top: 40px;
+        opacity: 0.85;
       }
 
       /* FAQs */
@@ -124,13 +134,13 @@
 
       .gallery-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 12px;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 10px;
       }
 
       .gallery-grid img {
         width: 100%;
-        height: 240px;
+        height: 200px;
         object-fit: cover;
         border-radius: 6px;
         cursor: pointer;
@@ -140,6 +150,17 @@
       .gallery-grid img:hover {
         transform: scale(1.03);
         box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      }
+
+      @media (max-width: 480px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
+        }
+
+        .gallery-grid img {
+          height: 160px;
+        }
       }
 
       /* Lightbox */
@@ -179,6 +200,33 @@
       .lightbox-close:hover {
         opacity: 1;
       }
+
+      /* Ceremony */
+      .ceremony-content {
+        text-align: center;
+        max-width: 560px;
+      }
+
+      .ceremony-content h1 {
+        font-family: "Great Vibes", cursive;
+        font-size: clamp(2.8rem, 8vw, 5rem);
+        line-height: 1.1;
+        margin-bottom: 20px;
+      }
+
+      .ceremony-content p {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        line-height: 1.8;
+        opacity: 0.9;
+      }
+
+      .ceremony-content video {
+        margin-top: 32px;
+        width: 100%;
+        max-width: 360px;
+        border-radius: 8px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+      }
     </style>
   </head>
   <body>
@@ -192,10 +240,12 @@
 
     <!-- Home -->
     <div class="section active" id="section-home">
+      <img class="home-floral" src="floral_header.png" alt="" />
       <div class="home-content">
         <h1>Congratulations to Kieran and Nang</h1>
         <p>Yes, we got married. Sorry for not letting everyone know sooner. But this is our announcement website that you can find updates for our official wedding, details for get-togethers, etc. We can't wait for you to be a part of this next chapter of our lives!</p>
       </div>
+      <img class="home-footer-floral" src="floral_footer.png" alt="" />
     </div>
 
     <!-- FAQs -->
@@ -234,10 +284,10 @@
 
     <!-- The Ceremony -->
     <div class="section" id="section-ceremony">
-      <div class="home-content">
+      <div class="ceremony-content">
         <h1>The Ceremony</h1>
         <p>Be a part of our ceremony by watching the original video. While we wish all of you were there, we captured the moment so that you could be there too.</p>
-        <video controls style="margin-top: 32px; width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 6px 24px rgba(0,0,0,0.25);">
+        <video controls>
           <source src="https://files.kieranschoaf.com/s/85HGoaDn7j73Mry/download" type="video/mp4" />
           Your browser does not support this video.
         </video>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nang & Kieran</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -85,11 +86,9 @@
       }
 
       /* Home */
-      .home-floral {
-        width: 100%;
-        max-width: 560px;
-        display: block;
-        margin-bottom: -8px;
+      #section-home {
+        min-height: calc(100vh - 56px);
+        justify-content: center;
       }
 
       .home-content {
@@ -101,21 +100,22 @@
         font-family: "Great Vibes", cursive;
         font-size: clamp(2.8rem, 8vw, 5rem);
         line-height: 1.1;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
+      }
+
+      .home-content .wedding-date {
+        font-family: "EB Garamond", Georgia, serif;
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        letter-spacing: 0.15em;
+        opacity: 0.75;
+        margin-bottom: 28px;
+        text-transform: uppercase;
       }
 
       .home-content p {
         font-size: clamp(1rem, 2.5vw, 1.2rem);
         line-height: 1.8;
         opacity: 0.9;
-      }
-
-      .home-footer-floral {
-        width: 100%;
-        max-width: 320px;
-        display: block;
-        margin-top: 40px;
-        opacity: 0.85;
       }
 
       /* FAQs */
@@ -130,6 +130,13 @@
       .gallery-content {
         width: 100%;
         max-width: 860px;
+      }
+
+      .gallery-content h2 {
+        font-family: "Great Vibes", cursive;
+        font-size: clamp(2.4rem, 6vw, 3.5rem);
+        text-align: center;
+        margin-bottom: 24px;
       }
 
       .gallery-grid {
@@ -220,8 +227,14 @@
         opacity: 0.9;
       }
 
+      .ceremony-divider {
+        width: 60px;
+        height: 1px;
+        background: rgba(26,26,26,0.3);
+        margin: 28px auto;
+      }
+
       .ceremony-content video {
-        margin-top: 32px;
         width: 100%;
         max-width: 360px;
         border-radius: 8px;
@@ -242,6 +255,7 @@
     <div class="section active" id="section-home">
       <div class="home-content">
         <h1>Congratulations to Kieran and Nang</h1>
+        <p class="wedding-date">December 5th, 2025 &nbsp;·&nbsp; Chicago, IL</p>
         <p>Yes, we got married. Sorry for not letting everyone know sooner. But this is our announcement website that you can find updates for our official wedding, details for get-togethers, etc. We can't wait for you to be a part of this next chapter of our lives!</p>
       </div>
     </div>
@@ -256,6 +270,7 @@
     <!-- Gallery -->
     <div class="section" id="section-gallery">
       <div class="gallery-content">
+        <h2>Gallery</h2>
         <div class="gallery-grid">
           <img src="images/IMG_0940.JPG" alt="Wedding photo" onclick="openLightbox(this.src)" />
           <img src="images/IMG_0943.JPG" alt="Wedding photo" onclick="openLightbox(this.src)" />
@@ -285,6 +300,7 @@
       <div class="ceremony-content">
         <h1>The Ceremony</h1>
         <p>Be a part of our ceremony by watching the original video. While we wish all of you were there, we captured the moment so that you could be there too.</p>
+        <div class="ceremony-divider"></div>
         <video controls>
           <source src="https://files.kieranschoaf.com/s/85HGoaDn7j73Mry/download" type="video/mp4" />
           Your browser does not support this video.

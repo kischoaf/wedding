@@ -1,0 +1,51 @@
+---
+const { compact = false } = Astro.props;
+---
+
+<div class="split-grid">
+  <div class="portrait-stack" aria-label="Wedding portraits">
+    <img src="/images/IMG_5933.JPG" alt="Kieran and Nang on their wedding day" loading="lazy" />
+    <img src="/images/IMG_3465.jpg" alt="A candid wedding day moment" loading="lazy" />
+  </div>
+  <div class="copy-block">
+    <p class="eyebrow">The beginning of this chapter</p>
+    <h1>{compact ? "From DePaul dorms to forever." : "From friends to family."}</h1>
+    <p>
+      We met in 2018 in the DePaul dorms, Beldine Racine Hall to be exact.
+      We started talking as friends, the way the best things sometimes begin:
+      casually, honestly, without knowing how much a person is about to matter.
+    </p>
+    <p>
+      Some of the earliest memories still feel perfectly us. Kieran falling
+      asleep on Nang's mattress topper while she was studying for finals. Nang
+      getting her first tattoo and wanting to show him first.
+    </p>
+    <p>
+      Our first date was the Art Institute of Chicago and sushi at Hot Woks Cool
+      Sushi next to the museum. On the walk there, someone from Kraft was handing
+      out free mac and cheese, which feels like the kind of strange, perfect
+      Chicago detail a story should keep forever.
+    </p>
+    {!compact && (
+      <p>
+        We still have pieces of that day: the museum program, the ticket on
+        Nang's cork board, and the memory of walking through the miniature rooms
+        exhibit telling each other which tiny rooms we wanted to live in.
+      </p>
+    )}
+    <div class="memory-list" aria-label="Wedding day highlights">
+      <article class="memory">
+        <strong>2018</strong>
+        <p>Friends first in Beldine Racine Hall.</p>
+      </article>
+      <article class="memory">
+        <strong>First date</strong>
+        <p>Art Institute, miniature rooms, sushi, and surprise mac and cheese.</p>
+      </article>
+      <article class="memory">
+        <strong>Wedding day</strong>
+        <p>Daley Center, Amazon rings, borrowed cash, and our people.</p>
+      </article>
+    </div>
+  </div>
+</div>

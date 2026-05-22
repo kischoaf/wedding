@@ -1,0 +1,21 @@
+export const galleryPhotos = [
+  { src: "/images/IMG_0940.JPG", featured: true, alt: "Wedding day photo" },
+  { src: "/images/IMG_0943.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_0944.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_0949.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_0951.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_0952.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_3398.JPG", featured: true, alt: "Wedding day photo" },
+  { src: "/images/IMG_3413.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_3465.jpg", alt: "Wedding day photo" },
+  { src: "/images/IMG_3483.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_3486.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_3487.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_3490.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_3492.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_5901.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_5925.JPG", featured: true, alt: "Wedding day photo" },
+  { src: "/images/IMG_5933.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_5940.JPG", alt: "Wedding day photo" },
+  { src: "/images/IMG_5998.JPG", alt: "Wedding day photo" }
+];

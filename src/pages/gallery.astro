@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GalleryGrid from "../components/GalleryGrid.astro";
+---
+
+<BaseLayout title="Gallery" active="/gallery/">
+  <main>
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Wedding day album</p>
+          <h1>Gallery</h1>
+          <p>Little scenes from the day: downtown, courthouse light, portraits, and the people who made it feel real.</p>
+        </div>
+        <GalleryGrid />
+      </div>
+    </section>
+  </main>
+</BaseLayout>

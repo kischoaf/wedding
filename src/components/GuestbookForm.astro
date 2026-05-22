@@ -1,0 +1,61 @@
+---
+import { site } from "../data/site.js";
+---
+
+<div class="note-wrap">
+  <div class="note-card">
+    <p class="eyebrow">Send us love</p>
+    <h1>Leave us a note.</h1>
+    <p>
+      Send us love, a memory, a toast, a tiny blessing, a favorite photo caption,
+      or anything you want us to keep from this season.
+    </p>
+    <p>
+      This opens an email draft addressed to us, which keeps the site simple while
+      still giving everyone a way to be part of the guestbook.
+    </p>
+  </div>
+  <form class="note-card note-form" id="noteForm">
+    <div class="field">
+      <label for="noteName">Your name</label>
+      <input id="noteName" name="name" autocomplete="name" placeholder="Your name" />
+    </div>
+    <div class="field">
+      <label for="noteMessage">Your note</label>
+      <textarea id="noteMessage" name="message" required placeholder="Send us love, a memory, or something very you."></textarea>
+    </div>
+    <button class="button button-primary" type="submit">Send love</button>
+    <p class="note-status" id="noteStatus" aria-live="polite"></p>
+  </form>
+</div>
+
+<script define:vars={{ noteRecipient: site.noteRecipient }}>
+  const noteForm = document.getElementById("noteForm");
+  const noteStatus = document.getElementById("noteStatus");
+
+  if (noteForm && noteStatus) {
+    noteForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const name = document.getElementById("noteName").value.trim() || "Anonymous";
+      const message = document.getElementById("noteMessage").value.trim();
+
+      if (!message) {
+        noteStatus.textContent = "Write a note first, then send it our way.";
+        return;
+      }
+
+      const body = `From: ${name}\n\n${message}`;
+      const subject = "A note for Kieran and Nang";
+      const mailto = `mailto:${noteRecipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      try {
+        await navigator.clipboard.writeText(body);
+        noteStatus.textContent = "Copied and opening your email app.";
+      } catch (error) {
+        noteStatus.textContent = "Opening your email app.";
+      }
+
+      window.location.href = mailto;
+    });
+  }
+</script>

@@ -1,0 +1,13 @@
+---
+import { updates } from "../data/updates.js";
+---
+
+<div class="timeline" aria-label="Updates timeline">
+  {updates.map((update) => (
+    <article class="timeline-item">
+      <time datetime="2026">{update.label}</time>
+      <h2>{update.title}</h2>
+      <p>{update.text}</p>
+    </article>
+  ))}
+</div>

@@ -1,0 +1,16 @@
+---
+import { galleryPhotos } from "../data/gallery.js";
+---
+
+<div class="gallery-grid" aria-label="Wedding photo gallery">
+  {galleryPhotos.map((photo) => (
+    <button
+      class:list={[{ featured: photo.featured }]}
+      type="button"
+      data-lightbox={photo.src}
+      aria-label="Open wedding photo"
+    >
+      <img src={photo.src} alt={photo.alt} loading="lazy" />
+    </button>
+  ))}
+</div>

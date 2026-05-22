@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FAQSection from "../components/FAQSection.astro";
+---
+
+<BaseLayout title="FAQs" active="/faqs/">
+  <main>
+    <section class="section section-alt">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Handmade by Nang</p>
+          <h1>Questions &amp; Answers</h1>
+          <p>The original FAQ stays exactly where it belongs: front and center. Tap it to zoom in.</p>
+        </div>
+        <FAQSection />
+      </div>
+    </section>
+  </main>
+</BaseLayout>

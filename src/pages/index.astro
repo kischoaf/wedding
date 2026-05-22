@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import StoryContent from "../components/StoryContent.astro";
+import CeremonyFeature from "../components/CeremonyFeature.astro";
+import GalleryGrid from "../components/GalleryGrid.astro";
+import FAQSection from "../components/FAQSection.astro";
+import UpdateTimeline from "../components/UpdateTimeline.astro";
+import GuestbookForm from "../components/GuestbookForm.astro";
+---
+
+<BaseLayout active="/">
+  <main>
+    <Hero />
+
+    <section class="section">
+      <div class="section-inner">
+        <StoryContent compact />
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="section-inner">
+        <CeremonyFeature />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Wedding day album</p>
+          <h2>Gallery</h2>
+          <p>Little scenes from the day: downtown, courthouse light, portraits, and the people who made it feel real.</p>
+        </div>
+        <GalleryGrid />
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">Handmade by Nang</p>
+          <h2>Questions &amp; Answers</h2>
+          <p>The original FAQ stays exactly where it belongs: front and center. Tap it to zoom in.</p>
+        </div>
+        <FAQSection />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner updates-grid">
+        <div class="panel">
+          <p class="eyebrow">What comes next</p>
+          <h2>Our update board</h2>
+          <p>
+            This section can become the running record for anything wedding-related:
+            new photos, celebration plans, travel details, reception notes, and
+            little milestones from married life.
+          </p>
+          <p>
+            We do want a bigger ceremony and reception later. For now, we are
+            giving that dream room to become real without rushing it, and this
+            will be the place where details appear when they are ready. Formal
+            invites will come later.
+          </p>
+        </div>
+        <UpdateTimeline />
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="section-inner">
+        <GuestbookForm />
+      </div>
+    </section>
+  </main>
+</BaseLayout>

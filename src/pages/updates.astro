@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import UpdateTimeline from "../components/UpdateTimeline.astro";
+---
+
+<BaseLayout title="Updates" active="/updates/">
+  <main>
+    <section class="section">
+      <div class="section-inner updates-grid">
+        <div class="panel">
+          <p class="eyebrow">What comes next</p>
+          <h1>Our update board</h1>
+          <p>
+            This section can become the running record for anything wedding-related:
+            new photos, celebration plans, travel details, reception notes, and
+            little milestones from married life.
+          </p>
+          <p>
+            We do want a bigger ceremony and reception later. For now, we are
+            giving that dream room to become real without rushing it, and this
+            will be the place where details appear when they are ready. Formal
+            invites will come later.
+          </p>
+        </div>
+        <UpdateTimeline />
+      </div>
+    </section>
+  </main>
+</BaseLayout>

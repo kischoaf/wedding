@@ -7,11 +7,27 @@ import GalleryGrid from "../components/GalleryGrid.astro";
 import FAQSection from "../components/FAQSection.astro";
 import UpdateTimeline from "../components/UpdateTimeline.astro";
 import GuestbookForm from "../components/GuestbookForm.astro";
+import HomeFeatureGrid from "../components/HomeFeatureGrid.astro";
 ---
 
 <BaseLayout active="/">
   <main>
     <Hero />
+
+    <section class="home-intro" aria-label="Site highlights">
+      <div class="section-inner">
+        <div class="intro-panel">
+          <p class="eyebrow">A marriage archive</p>
+          <h2>Part announcement, part scrapbook, part source of truth.</h2>
+          <p>
+            This is where the whole story can live: why we chose each other,
+            what happened that morning, the handmade FAQ, the photos, the ceremony
+            video, future celebration plans, and notes from the people we love.
+          </p>
+        </div>
+        <HomeFeatureGrid />
+      </div>
+    </section>
 
     <section class="section">
       <div class="section-inner">

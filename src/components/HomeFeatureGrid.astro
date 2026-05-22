@@ -1,0 +1,38 @@
+---
+const features = [
+  {
+    href: "/story/",
+    label: "01",
+    title: "The story",
+    text: "DePaul dorms, a first date at the Art Institute, tiny rooms, sushi, and free mac and cheese."
+  },
+  {
+    href: "/ceremony/",
+    label: "02",
+    title: "The ceremony",
+    text: "A freezing, chaotic, intimate morning at the Daley Center with borrowed cash and Amazon rings."
+  },
+  {
+    href: "/gallery/",
+    label: "03",
+    title: "The photos",
+    text: "The wedding day album: downtown light, courthouse moments, portraits, and the people who were there."
+  },
+  {
+    href: "/guestbook/",
+    label: "04",
+    title: "Send love",
+    text: "Leave a note, a toast, a memory, or anything you want us to keep from this season."
+  }
+];
+---
+
+<div class="feature-grid">
+  {features.map((feature) => (
+    <a class="feature-card" href={feature.href}>
+      <span>{feature.label}</span>
+      <h2>{feature.title}</h2>
+      <p>{feature.text}</p>
+    </a>
+  ))}
+</div>

@@ -1,0 +1,48 @@
+---
+const moments = [
+  {
+    label: "Early morning",
+    title: "Getting ready at home",
+    text: "The day started before the city fully woke up. We got ready together in our apartment and stepped out into a cold Chicago morning."
+  },
+  {
+    label: "Downtown",
+    title: "Finding marriage court",
+    text: "We teamed up with a stranger who was also trying to find marriage court so she could see her daughter."
+  },
+  {
+    label: "The fee",
+    title: "Borrowed cash",
+    text: "We did not have the ten dollars in cash we needed, so Autumn became part of the story in the most practical possible way."
+  },
+  {
+    label: "The rings",
+    title: "Fifteen-dollar Amazon rings",
+    text: "They were simple, imperfect, and completely ours."
+  },
+  {
+    label: "After",
+    title: "Bagels, art, sushi",
+    text: "Einstein Bros. Bagels, the Art Institute, and Hot Woks Cool Sushi brought the first date back into the wedding day."
+  }
+];
+---
+
+<section class="section day-section">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="eyebrow">The day in motion</p>
+      <h2>Not polished. Perfect.</h2>
+      <p>Some wedding days are rehearsed down to the minute. Ours became a story while it was happening.</p>
+    </div>
+    <div class="day-timeline">
+      {moments.map((moment) => (
+        <article class="day-moment">
+          <span>{moment.label}</span>
+          <h3>{moment.title}</h3>
+          <p>{moment.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

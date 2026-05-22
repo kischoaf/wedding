@@ -1,0 +1,19 @@
+---
+const photos = [
+  "/images/IMG_5901.JPG",
+  "/images/IMG_0940.JPG",
+  "/images/IMG_5933.JPG",
+  "/images/IMG_3413.JPG",
+  "/images/IMG_5998.JPG"
+];
+---
+
+<section class="photo-ribbon" aria-label="Featured wedding photos">
+  <div class="photo-ribbon-track">
+    {photos.map((photo, index) => (
+      <figure class:list={["ribbon-photo", { tall: index === 2 }]}>
+        <img src={photo} alt="Featured wedding day moment" loading="lazy" />
+      </figure>
+    ))}
+  </div>
+</section>

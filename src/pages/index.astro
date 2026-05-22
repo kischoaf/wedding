@@ -8,6 +8,9 @@ import FAQSection from "../components/FAQSection.astro";
 import UpdateTimeline from "../components/UpdateTimeline.astro";
 import GuestbookForm from "../components/GuestbookForm.astro";
 import HomeFeatureGrid from "../components/HomeFeatureGrid.astro";
+import Manifesto from "../components/Manifesto.astro";
+import PhotoRibbon from "../components/PhotoRibbon.astro";
+import DayTimeline from "../components/DayTimeline.astro";
 ---
 
 <BaseLayout active="/">
@@ -29,11 +32,17 @@ import HomeFeatureGrid from "../components/HomeFeatureGrid.astro";
       </div>
     </section>
 
+    <Manifesto />
+
+    <PhotoRibbon />
+
     <section class="section">
       <div class="section-inner">
         <StoryContent compact />
       </div>
     </section>
+
+    <DayTimeline />
 
     <section class="section section-alt">
       <div class="section-inner">
